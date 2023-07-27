@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "commonjs",
+    "jsx": "preserve",
+    "target": "es6",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "noEmit": true,
+    "allowJs": true,
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "rootDir": "src",
+    "moduleResolution": "node",
+    "strictNullChecks": false,
+    "strictPropertyInitialization": false
+  },
+  "include": ["src"]
+}
