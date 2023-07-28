@@ -1,6 +1,7 @@
 // import "./pixi";
-import ExampleTransition from "./examples/transition/ExampleTransition";
 import Game from "chibiengine/src/engine/game/Game";
+import ExampleKeyboard from "./examples/keyboard/ExampleKeyboard";
+import PixiExample from "./examples/pixi/PixiExample";
 
 const game = new Game({
     width: 800,
@@ -11,10 +12,11 @@ const game = new Game({
     // autoResize: true,
 });
 
-// game.addScene(new Example1());
+// game.addScene(new LoadingAssetsExample());
 // game.addScene(new ExampleKeyboard());
+game.addScene(new PixiExample());
 // game.addScene(new ExampleAtlas());
-game.addScene(new ExampleTransition());
+// game.addScene(new ExampleTransition());
 // game.addScene(new ExampleKeyboard());
 // game.addScene(new ExampleTweens());
 // game.addScene(new ExampleReactivePositioning());
