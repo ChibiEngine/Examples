@@ -1,10 +1,11 @@
 //@ts-ignore
-import bunnyURL from "../../assets/bunny.png?url";
 import Scene from "chibiengine/src/engine/game/Scene";
-import Enemy from "./Enemy.ts";
-import Sprite from "chibiengine/src/engine/gameobjects/Sprite";
-import Damageable from "./Damageable.ts";
 import Image from "chibiengine/src/engine/resource/Image";
+import Sprite from "chibiengine/src/engine/gameobjects/Sprite";
+
+import bunnyURL from "../../assets/bunny.png?url";
+import Enemy from "./prefab/Enemy";
+import Damageable from "./components/Damageable";
 
 /*
   * This example shows how to use components.

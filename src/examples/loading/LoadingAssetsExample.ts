@@ -1,5 +1,4 @@
 //@ts-ignore
-import bunnyURL from "../../assets/bunny.png?url";
 import Image from "chibiengine/src/engine/resource/Image";
 import Sprite from "chibiengine/src/engine/gameobjects/Sprite";
 import Container from "chibiengine/src/engine/gameobjects/Container";
@@ -8,7 +7,9 @@ import Scene from "chibiengine/src/engine/game/Scene";
 import Cache from "chibiengine/src/engine/loader/Cache";
 import {VariableUpdatable} from "chibiengine/src/engine/gameobjects/Updatable";
 
-export default class Example1 extends Scene implements VariableUpdatable {
+import bunnyURL from "../../assets/bunny.png?url";
+
+export default class LoadingAssetsExample extends Scene implements VariableUpdatable {
   private container: Container;
   private text: Text;
 

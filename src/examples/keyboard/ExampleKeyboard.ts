@@ -18,16 +18,16 @@ export default class ExampleKeyboard extends Scene implements FixedUpdatable {
   }
 
   update(): void {
-    if (Keyboard.isKeyDown("ArrowUp")) {
+    if (Keyboard.wasKeyDown("ArrowUp", 100)) {
       this.bunny.position.y -= 50;
     }
-    if (Keyboard.isKeyDown("ArrowDown")) {
+    if (Keyboard.wasKeyDown("ArrowDown", 100)) {
       this.bunny.position.y += 50;
     }
-    if (Keyboard.isKeyDown("ArrowLeft")) {
+    if (Keyboard.wasKeyDown("ArrowLeft", 100)) {
       this.bunny.position.x -= 50;
     }
-    if (Keyboard.isKeyDown("ArrowRight")) {
+    if (Keyboard.wasKeyDown("ArrowRight", 100)) {
       this.bunny.position.x += 50;
     }
   }

@@ -13,6 +13,7 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
-    "chibiengine": "file:./ChibiEngine"
+    "chibiengine": "file:./ChibiEngine",
+    "pixi.js": "6.5.8"
   }
 }
