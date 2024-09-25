@@ -1,9 +1,7 @@
 //@ts-ignore
-import Scene from "chibiengine/src/engine/game/Scene";
-import Image from "chibiengine/src/engine/resource/Image";
-import Sprite from "chibiengine/src/engine/gameobjects/Sprite";
-
 import bunnyURL from "../../assets/bunny.png?url";
+import {Scene, Sprite, Texture} from "chibiengine";
+
 import Enemy from "./prefab/Enemy";
 import Damageable from "./components/Damageable";
 
@@ -26,7 +24,7 @@ export default class ExampleComponents extends Scene {
     console.log(enemy.damageable.health, "PV");
     console.log(enemy.health, "PV");
 
-    const enemy2 = this.add(new Sprite(new Image(bunnyURL), 0,0)).addComponent(new Damageable());
+    const enemy2 = this.add(new Sprite(new Texture(bunnyURL), 0,0)).addComponent(new Damageable());
     enemy2.damageable.health = 20;
     // TODO : sucre syntaxique pour virer ce .damageable -> Mixin
   }

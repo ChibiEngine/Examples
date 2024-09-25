@@ -1,7 +1,20 @@
 // import "./pixi";
-import Game from "chibiengine/src/engine/game/Game";
+import { Game, InstantiableClass, Scene } from "chibiengine";
+
 import ExampleKeyboard from "./examples/keyboard/ExampleKeyboard";
 import PixiExample from "./examples/pixi/PixiExample";
+import Pixi2Example from "./examples/pixi2/Pixi2Example";
+import ExampleTransition from "./examples/transition/ExampleTransition";
+import ExampleTransition2 from "./examples/transition/ExampleTransition2";
+import LoadingAssetsExample from "./examples/loading/LoadingAssetsExample";
+import ExampleTweens from "./examples/tweens/ExampleTweens";
+import ScaleExample from "./examples/scale/ScaleExample";
+import TextExample from "./examples/text/TextExample";
+import TextureUpdateExample from "./examples/texture_update/TextureUpdateExample";
+import ExampleAtlas from "./examples/atlas/ExampleAtlas";
+
+const sceneSelect = document.getElementById("scene-select") as HTMLSelectElement;
+const sceneMap = new Map<string, InstantiableClass<Scene>>();
 
 const game = new Game({
     width: 800,
@@ -12,13 +25,39 @@ const game = new Game({
     // autoResize: true,
 });
 
-// game.addScene(new LoadingAssetsExample());
-// game.addScene(new ExampleKeyboard());
-game.addScene(new PixiExample());
-// game.addScene(new ExampleAtlas());
-// game.addScene(new ExampleTransition());
-// game.addScene(new ExampleKeyboard());
-// game.addScene(new ExampleTweens());
-// game.addScene(new ExampleReactivePositioning());
-// game.addScene(new ExampleComponents());
-// game.addScene(new ExampleReactive());
+registerScene("Loading Assets", LoadingAssetsExample);
+registerScene("Scale", ScaleExample);
+registerScene("Keyboard", ExampleKeyboard);
+registerScene("Pixi", PixiExample);
+registerScene("Pixi2", Pixi2Example);
+registerScene("Atlas", ExampleAtlas);
+registerScene("Transition", ExampleTransition);
+registerScene("Transition2", ExampleTransition2);
+registerScene("Tweens", ExampleTweens);
+// registerScene("Reactive Positioning", ExampleReactivePositioning);
+// registerScene("Components", ExampleComponents);
+// registerScene("Reactive", ExampleReactive);
+registerScene("Text", TextExample);
+registerScene("Texture Update", TextureUpdateExample);
+
+game.start();
+
+selectScene(sceneSelect.value);
+
+sceneSelect.addEventListener("change", () => {
+    selectScene(sceneSelect.value);
+});
+
+function registerScene(name: string, scene: InstantiableClass<Scene>) {
+    const option = document.createElement("option");
+    option.value = name;
+    option.text = name;
+    sceneSelect.appendChild(option);
+    sceneMap.set(name, scene);
+}
+
+function selectScene(name: string) {
+    sceneSelect.value = name;
+    const SceneClass = sceneMap.get(name);
+    game.setScene(new SceneClass());
+}

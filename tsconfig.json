@@ -1,21 +1,22 @@
 {
   "compilerOptions": {
     "strict": true,
-    "module": "commonjs",
-    "jsx": "preserve",
-    "target": "es6",
+    "target": "es2020",
+    "lib": ["ESNext", "DOM"],
+    "module": "ESNext",
     "esModuleInterop": true,
     "sourceMap": true,
-    "noEmit": true,
+    "noEmit": false,
+    "skipLibCheck": true,
+    "outDir": "./lib",
+    "declaration": true,
     "allowJs": true,
-    "lib": [
-      "es6",
-      "dom"
-    ],
     "rootDir": "src",
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "strictNullChecks": false,
     "strictPropertyInitialization": false
   },
-  "include": ["src"]
+  "include": [
+    "src/**/*"
+  ]
 }

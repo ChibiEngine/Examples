@@ -1,5 +1,4 @@
-import Component from "chibiengine/src/engine/component/Component";
-import Event from "chibiengine/src/engine/event/Event";
+import { Component, Event } from "chibiengine";
 
 export default class Damageable extends Component<"damageable"> {
   public readonly componentName = "damageable";

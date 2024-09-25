@@ -1,4 +1,4 @@
-import Component from "chibiengine/src/engine/component/Component";
+import { Component } from "chibiengine";
 
 export default class Movable extends Component<"movable"> {
   public readonly componentName = "movable";

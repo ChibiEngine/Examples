@@ -1,6 +1,4 @@
-import Component from "chibiengine/src/engine/component/Component";
-import GameObject from "chibiengine/src/engine/gameobjects/GameObject";
-
+import {Component, GameObject} from "chibiengine";
 import Movable from "./Movable";
 
 export default class AIController extends Component<"ai_controller", GameObject & Movable> {

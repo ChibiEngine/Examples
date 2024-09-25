@@ -1,5 +1,4 @@
-import Container from "chibiengine/src/engine/gameobjects/Container";
-import Position from "chibiengine/src/engine/component/Position";
+import {Container, Position} from "chibiengine";
 
 import Damageable from "../components/Damageable";
 import Movable from "../components/Movable";

@@ -1,9 +1,6 @@
 //@ts-ignore
 import BUNNY_URL from "../../assets/bunny.png?url";
-import Scene from "chibiengine/src/engine/game/Scene";
-import Sprite from "chibiengine/src/engine/gameobjects/Sprite";
-import Image from "chibiengine/src/engine/resource/Image";
-import {VariableUpdatable} from "chibiengine/src/engine/gameobjects/Updatable";
+import {Scene, Sprite, Texture, VariableUpdatable} from "chibiengine";
 
 export default class ExampleReactivePositioning extends Scene implements VariableUpdatable {
   private bunny1: Sprite;
@@ -14,7 +11,7 @@ export default class ExampleReactivePositioning extends Scene implements Variabl
   protected async _create() {
     console.log("==== ExampleTransition ====");
 
-    const image = new Image(BUNNY_URL);
+    const image = new Texture(BUNNY_URL);
 
     this.bunny1 = this.add(new Sprite(image)).setPosition(this.game.screen.center)
     this.bunny2 = this.add(new Sprite(image));
