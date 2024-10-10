@@ -12,6 +12,7 @@ import ScaleExample from "./examples/scale/ScaleExample";
 import TextExample from "./examples/text/TextExample";
 import TextureUpdateExample from "./examples/texture_update/TextureUpdateExample";
 import ExampleAtlas from "./examples/atlas/ExampleAtlas";
+import PlatformerExample from "./examples/platformer/PlatformerExample";
 
 const sceneSelect = document.getElementById("scene-select") as HTMLSelectElement;
 const sceneMap = new Map<string, InstantiableClass<Scene>>();
@@ -39,6 +40,7 @@ registerScene("Tweens", ExampleTweens);
 // registerScene("Reactive", ExampleReactive);
 registerScene("Text", TextExample);
 registerScene("Texture Update", TextureUpdateExample);
+registerScene("Platformer", PlatformerExample);
 
 game.start();
 

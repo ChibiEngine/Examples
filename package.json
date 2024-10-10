@@ -16,7 +16,7 @@
     "@babel/preset-env": "7.13.8"
   },
   "dependencies": {
-    "chibiengine": "^0.8.1"
+    "chibiengine": "^0.9.1"
   },
   "peerDependencies": {
     "pixi.js": "^7.3.3"
