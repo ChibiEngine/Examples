@@ -2,6 +2,7 @@
 import bunnyURL from "../../assets/bunny.png?url";
 
 import {Container, ResourceManager, Scene, Sprite, Text, Texture, VariableUpdatable} from "chibiengine";
+import RotateBehavior from "./RotateBehavior";
 
 export default class LoadingAssetsExample extends Scene implements VariableUpdatable {
   private container: Container;
@@ -26,7 +27,7 @@ export default class LoadingAssetsExample extends Scene implements VariableUpdat
         texture,
         (i % 5) * 40,
         Math.floor(i / 5) * 40
-      ));
+      ).addComponent(new RotateBehavior()));
       await new Promise((resolve) => setTimeout(resolve, 100));
     }
 

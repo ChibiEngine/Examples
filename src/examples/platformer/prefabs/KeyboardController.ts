@@ -23,18 +23,15 @@ export default class KeyboardController extends Behavior<"kb_controller"> {
     super();
   }
 
-  public apply(target: GameObject) {
+  public async apply(target: GameObject) {
+    console.log("apply target=", target);
     this.target = target;
-    console.log("this.target=", this.target);
     target.position.setTransition(20);
     // @ts-ignore
     console.assert(target.width !== 0 && target.height !== 0, "Target size should be set", target);
   }
 
   public update(): void {
-    // console.log("KeyboardController update", dt);
-    // this.lastUpdateTime = performance.now();
-    // this.currentDt += dt;
     this.updateCount++;
 
     const dt = performance.now() - this.lastUpdateTime2;

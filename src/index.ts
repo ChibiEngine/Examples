@@ -13,6 +13,7 @@ import TextExample from "./examples/text/TextExample";
 import TextureUpdateExample from "./examples/texture_update/TextureUpdateExample";
 import ExampleAtlas from "./examples/atlas/ExampleAtlas";
 import PlatformerExample from "./examples/platformer/PlatformerExample";
+import LoadingAssets2Example from "./examples/loading2/LoadingAssets2Example";
 
 const sceneSelect = document.getElementById("scene-select") as HTMLSelectElement;
 const sceneMap = new Map<string, InstantiableClass<Scene>>();
@@ -27,6 +28,7 @@ const game = new Game({
 });
 
 registerScene("Loading Assets", LoadingAssetsExample);
+registerScene("Loading Assets 2", LoadingAssets2Example);
 registerScene("Scale", ScaleExample);
 registerScene("Keyboard", ExampleKeyboard);
 registerScene("Pixi", PixiExample);

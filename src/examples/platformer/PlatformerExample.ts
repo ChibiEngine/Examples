@@ -47,13 +47,9 @@ export default class PlatformerExample extends Scene {
       pixelScale: true,
     });
 
-    await tileset.create(); // Need to load the texture first to know widthInTiles / heightInTiles
+    await this.load(tileset); // Need to load the texture first to know widthInTiles / heightInTiles
 
-    const movable = mainLayer.add(new Sprite(tileset.getTileTexture(4)))
-        .setPosition(0, 128)
-        .setScale(2);
-
-    const tilemap = mainLayer.add(new (class extends Container {
+    const tilemap = mainLayer.add(new (class TileMap extends Container {
       protected async _create(): Promise<void> {
         for (let y = 0; y < foregroundTilemap.length; y++) {
           for (let x = 0; x < foregroundTilemap[y].length; x++) {

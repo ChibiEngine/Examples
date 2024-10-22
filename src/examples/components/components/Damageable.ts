@@ -1,9 +1,9 @@
-import { Component, Event } from "chibiengine";
+import { Component, ChibiEvent } from "chibiengine";
 
 export default class Damageable extends Component<"damageable"> {
   public readonly componentName = "damageable";
 
-  public readonly onDeath = new Event<void>();
+  public readonly onDeath = new ChibiEvent<void>();
 
   private _health: number;
 
