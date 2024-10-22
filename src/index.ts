@@ -12,6 +12,7 @@ import ScaleExample from "./examples/scale/ScaleExample";
 import TextExample from "./examples/text/TextExample";
 import TextureUpdateExample from "./examples/texture_update/TextureUpdateExample";
 import ExampleAtlas from "./examples/atlas/ExampleAtlas";
+import Box2DExample from "./examples/box2d/Box2DExample";
 import PlatformerExample from "./examples/platformer/PlatformerExample";
 import LoadingAssets2Example from "./examples/loading2/LoadingAssets2Example";
 
@@ -27,6 +28,7 @@ const game = new Game({
     // autoResize: true,
 });
 
+registerScene("Box2D", Box2DExample);
 registerScene("Loading Assets", LoadingAssetsExample);
 registerScene("Loading Assets 2", LoadingAssets2Example);
 registerScene("Scale", ScaleExample);
