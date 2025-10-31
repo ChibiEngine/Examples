@@ -3,7 +3,7 @@ import { Component, ChibiEvent } from "chibiengine";
 export default class Damageable extends Component<"damageable"> {
   public readonly componentName = "damageable";
 
-  public readonly onDeath = new ChibiEvent<void>();
+  public readonly onDeath = new ChibiEvent<[]>();
 
   private _health: number;
 
@@ -20,7 +20,7 @@ export default class Damageable extends Component<"damageable"> {
     this._health = health;
     if(this._health <= 0) {
       this._health = 0;
-      this.onDeath.trigger(null);
+      this.onDeath.trigger();
     }
   }
 

@@ -5,7 +5,7 @@ export default class AIController extends Component<"ai_controller", GameObject 
   public readonly componentName = "ai_controller";
 
   public target: GameObject & Movable;
-  apply(target: GameObject & Movable) {
+  public async apply(target: GameObject & Movable) {
     this.target = target;
     this.aiMove();
   }

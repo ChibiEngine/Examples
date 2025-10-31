@@ -1,10 +1,10 @@
 //@ts-ignore
 import bunnyURL from "../../assets/bunny.png?url";
 
-import {Container, ResourceManager, Scene, Sprite, Text, Texture, VariableUpdatable} from "chibiengine";
+import {Container, ResourceManager, Scene, Sprite, Text, Texture} from "chibiengine";
 import RotateBehavior from "./RotateBehavior";
 
-export default class LoadingAssetsExample extends Scene implements VariableUpdatable {
+export default class LoadingAssetsExample extends Scene {
   private container: Container;
   private text: Text;
 
@@ -12,6 +12,7 @@ export default class LoadingAssetsExample extends Scene implements VariableUpdat
     console.log("==== ExampleKeyboard ====");
 
     this.onProgress.subscribe((me) => { console.log(me.bytesLoaded,"/",me.bytesTotal); });
+
     this.text = await this.load(new Text("/assets/paragraph.txt"));
     console.log("text:", this.text.content);
     // Create a container at the center

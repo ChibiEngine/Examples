@@ -13,6 +13,8 @@ export default class TextureUpdateExample extends Scene {
 
     console.log("Before", sprite1.width, sprite1.height);
 
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
     await sprite1.setTexture(image2);
 
     console.log("After", sprite1.width, sprite1.height);
