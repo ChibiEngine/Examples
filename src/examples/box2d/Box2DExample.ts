@@ -23,10 +23,15 @@ export default class Box2DExample extends Scene {
       new Vec2(0, 0)
     ]);
 
-    const sprite = this.add(new Sprite(new Texture(bunnyURL))).setPosition(this.game.screen.center)
+    const sprite = this.add(new Sprite(new Texture(bunnyURL)))
+        .addComponent(new PhysicsBody(polygon, {offset: new Vec2(13.5, 16)}))
+        .setPosition(this.game.screen.center)
         .setAnchor(0, 0);
     sprite.position.setTransition(1000/UPDATE_RATE);
-    sprite.addComponent(new PhysicsBody(polygon, {offset: new Vec2(13.5, 16)}));
+
+    sprite.onBeginContact.subscribe((contact) => {
+      console.log("BUNNY CONTACT", contact);
+    });
 
     const platform = this.add(new PixiObject(new PIXI.Graphics()));
     platform.setPosition(0, this.game.screen.height - 50); // TODO : pb, beginFill not available if platform = this.add(...).setPosition(...)
