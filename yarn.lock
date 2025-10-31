@@ -778,10 +778,10 @@
     "@babel/helper-validator-identifier" "^7.24.7"
     to-fast-properties "^2.0.0"
 
-"@chibiengine/box2d@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@chibiengine/box2d/-/box2d-0.0.2.tgz#0d87255f1225bc1c902b735699bc4800b73d9165"
-  integrity sha512-ZOFYN+4jblqrWMg4x85wsKYIq5MRJ3qL/9ErjcTH9neIBrhVUHydH0neD043+DpG9P/Q3KWfnGDK6c6CSTYvKw==
+"@chibiengine/box2d@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@chibiengine/box2d/-/box2d-0.1.0.tgz#b82365545a3e749a4ce3f02491280610c31a5ac2"
+  integrity sha512-2ffYUWPLNF7G8A5IljZKWe5/tIEqDbi5Qu5UKyXOqYocU/fiebliRWxRMsa1BGT0DvYwl8vE3jMD9B+IcsZ4+g==
   dependencies:
     box2d-wasm "^7.0.0"
 
@@ -1383,10 +1383,10 @@ chalk@^2.4.2:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
-chibiengine@^0.10.0:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/chibiengine/-/chibiengine-0.10.0.tgz#da352f4b115479915774661ff730e808873c75d5"
-  integrity sha512-OvIK+fmPHDo3htSMAoebKep29xZsGHXRnI5tNHLQ2Uy4TFUB1gGGJ57UEqTVJcWEcF2CWI04zNANoT3PXhn4Dw==
+chibiengine@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/chibiengine/-/chibiengine-0.12.0.tgz#40095a4d21cfc2436ebc1b4d28d96711a1343763"
+  integrity sha512-eBAlA+q+T9TRyTPC6XPzKMsiI0No+mrYswPkzO/uilQ4UWGP410eOJ0xSLv18NRhZhFEm/fWyYqgtpg5/PUeLA==
   dependencies:
     "@types/css-font-loading-module" "^0.0.8"
     pixi.js "~7.3.1"
